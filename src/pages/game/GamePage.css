@@ -1,0 +1,108 @@
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 85%;
+    box-sizing: border-box;
+    margin: 130px 0 0 0;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.input-fields input {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-fields label {
+    margin: 0 0 0 20px;
+}
+
+.input-fields input:hover,
+.input-fields select:hover,
+.buttons button:hover {
+    cursor: pointer;
+}
+
+.error {
+    color: rgb(237, 115, 115);
+}
+
+button {
+    background-color: #9189ef;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #4c478a;
+}
+
+.mode-selection select {
+    padding: 5px;
+    margin-left: 5px;
+}
+
+/* -------------------- grid ----------------------- */
+.board-container {
+    margin: 76px 0 0 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-width), min(25px, calc(70vw / var(--grid-width))));
+    grid-template-rows: repeat(var(--grid-height), min(25px, calc(70vw / var(--grid-width))));
+    gap: 0;
+}
+
+.cell {
+    width: 100%; 
+    height: 0;
+    padding-top: 100%;
+    border: 0.1vw solid #ddd;
+    box-sizing: border-box;
+}
+
+.cell.alive {
+    background-color: black;
+}
+
+.cell.dead {
+    background-color: white;
+}
+
+.data {
+    padding: 20px;
+}
+
+.generation {
+    padding: 0 20px 0 0 ;
+}
+
+
+@media (max-width: 430px) {
+    .board-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .input-fields label,
+    .buttons button,
+    .mode-selection select {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(var(--grid-width), min(25px, calc(50vw / var(--grid-width))));
+        grid-template-rows: repeat(var(--grid-height), min(25px, calc(50vw / var(--grid-width))));
+    }
+}
