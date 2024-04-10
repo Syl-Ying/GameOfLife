@@ -50,11 +50,9 @@
 }
 
 @media (max-width: 480px) {
-    .home-container {
-        margin: 350px 0 0 0;
-    }
+    
     .home-container h1 {
-        font-size: 24px; 
+        font-size: 20px; 
     }
 
     .home-container p, .home-container ul li {
